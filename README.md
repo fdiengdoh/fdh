@@ -31,7 +31,7 @@ The link is in this format
 [ 'link' => 'link-url-here', 'icon' => 'bootstrap-icon here', 'title' => 'Title of the Link' ]
 ```
 
-The above [link.php](file) is then converted to html file using a simple command in linux as follows
+The above [file](link.php) is then converted to html file using a simple command in linux as follows
 
 ```
 php /location/of/your/link.php > index.html
