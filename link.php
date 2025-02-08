@@ -1,0 +1,111 @@
+<?php
+  $links = [
+    //Add New Link on this line using this format [ 'link' => 'link-url-here', 'icon' => 'bootstrap-icon here', 'title' => 'Title of the Link' ]
+      [ 'link' => 'https://www.fdiengdoh.com/2023/01/calendar-2023.html', 'icon' => '<i class="bi bi-link-45deg"></i>', 'title' => 'Ka Kyrteng jong ki Bnai ha ka Ktien Khasi' ],
+      [ 'link' => 'https://www.fdiengdoh.com/2022/04/useful-email-aliases-using-google-mail.html', 'icon' => '<i class="bi bi-link-45deg"></i>', 'title' => 'Useful Email Aliases using GMail' ],
+      [ 'link' => 'https://www.fdiengdoh.com/2020/07/ka-ei-ka-vaccine.html', 'icon' => '<i class="bi bi-link-45deg"></i>', 'title' => 'Ka ei ka Baksin (Vaccine)?' ],
+      [ 'link' => 'https://youtu.be/tTNKS6CsG3o', 'icon' => '<i class="bi bi-camera-video-fill"></i>', 'title' => 'Ka Hima Lyngiong' ],
+      [ 'link' => 'https://youtu.be/fix8QC_rlY8', 'icon' => '<i class="bi bi-camera-video-fill"></i>', 'title' => 'Resonate Router UPS: A Review'],
+      [ 'link' => 'https://youtu.be/RRSOQHD1H50', 'icon' => '<i class="bi bi-camera-video-fill"></i>', 'title' => "Meghalaya - a bird's eye view"],
+      [ 'link' => 'https://youtu.be/GmoQa8Y61TE', 'icon' => '<i class="bi bi-camera-video-fill"></i>', 'title' => "Phe Phe Falls - Jaiñtia Hills"],
+      [ 'link' => 'https://www.youtube.com/playlist?list=PLnAxMOVwqslFysqxWXNin2Y2w5J2y17Od', 'icon' => '<i class="bi bi-camera-video-fill"></i>', 'title' => "Travel - Vlogs"],
+      [ 'link' => 'https://www.youtube.com/playlist?list=PLnAxMOVwqslEjju22ao-CcfceynfUpVXt', 'icon' => '<i class="bi bi-camera-video-fill"></i>', 'title' => "Unboxing - Tutorials"],
+  ];
+?>
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Quick Links for fdphy, fdiengdoh.com">
+      <meta name="keywords" content="linktree, links, social, media">
+      <meta name="author" content="Farlando Diengdoh">
+      <link rel="icon" href="ltree/favicon.png" type="image/png" >
+      <title>FDPHY Links</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      <style>
+         body {
+         background-color: #c2deff;
+         }
+         .btn{
+         background-color: #1e4c7c;
+         color: #fff;
+         display:block;
+         }
+         .btn:hover {
+         background-color:#326092;
+         color:#fff;
+         }
+      </style>
+   </head>
+   <body>
+   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="fdphy" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+         <circle style="fill:#1e4c7c" cx="499.6" cy="500" r="463"/>
+         <path style="fill: #fff;" d="M785.9,583c-12.7-25.7-29.8-50.2-53-67.5,3-27.9,7.6-55.6,14-83,14.6-63.2,38-124.1,64.1-183.4-14,29.3-27.2,59-39.1,89.3-22.1,55.4-37.5,113.4-45.9,172.4-1.5-1-3-1.9-4.6-2.9-14.8-8.6-31.6-13.8-48.9-13.8-18.5-.2-36.5,8.2-50.1,20.3-4,3.4-7.9,8-11.3,13.3-7.8-.9-16.6,2.3-22.6,7.8-6,5.7-11.5,12-16,19-6.9-11.1-17.1-18.5-32.4-13.4-12.1,4.2-21.8,19-28.9,34.3-23.7-28.8-60.4-45.5-97.1-26-6.4,3.6-12.3,7.9-17.7,12.7-2.3-15.5-4.5-28.3-6.2-36.9-6-32.2-13.7-64.7-28.2-94.3-17.8-37.3-47.4-72.7-88.7-84.2-37.3-10.6-79.6,1.5-104.5,31.6-44.2,53.2-45.2,137.4-32.1,202.2,18.2,87.8,63.8,147.1,144.3,186.5-59.5-31.7-103.8-76.5-125.3-141.3-24.2-71.3-28.2-166.5,13.7-231.7,26.3-40.9,80.9-52.7,122.6-28.9,27.6,15.3,47.4,41.9,61,70.1,14.1,28.9,21.4,60.3,27.4,91.8,2.7,14.5,5.1,29.1,7.2,43.7-15.1,16.1-26.7,35.9-37,54.7-7.6,14.6-15,29.3-21,44.6-11.6,31.2-17.4,64.7-13.9,98,2.4,19,8.5,39.7,24.9,51.6,9.6,6.6,22.3,10.2,33.6,5.6,46.8-20.2,35.7-165.9,24-251,6.5-6.5,13.4-12,20.7-16.1,33.7-18,67.1,0,87.8,27.6-2.6,6.6-4.8,12.9-6.4,17.8-7.8,23.8-12.5,48.8-10,73.9,1.6,15.8,6.4,39,22.2,46.8,9.8,4.5,22.2-.5,27.5-9.5,4.6-8.1,4.4-17.7,4.2-26.5-.3-8.4-1.2-16.5-2.2-24.7-2.2-16.4-3.6-33.1-9.1-48.8-3.4-10.6-8.5-20.9-14.9-30.4,0,0,0-.1,0-.2,5-11.1,13.1-27.8,24-33.4,12.4-5,19.5,3,24.5,13.6-4.7,9.2-7.8,19.1-9.1,29.5-.8,6.5-1.1,13.4.6,20,2.3,10,11.1,15.7,20.8,10.3,15.2-9.5,5.9-38.6,1.5-52-.8-2.5-1.7-4.9-2.7-7.4,4.2-7.4,9.5-14.1,15.4-20.1,1.2-1.2,2.5-2.5,3.9-3.5,2.4-1.7,5.4-3.1,8.5-3.7-6,12.8-9.3,27.5-7.5,39,.7,3.8,2.6,8.4,6.1,11,5.1,3.8,12.8,3.3,17.5-.8,6.5-5.9,7.6-15.5,8-23.4.2-4.3,0-8.6-.4-12.8-.4-4.4-1.3-9.3-4.1-13.8-1.4-2.2-3-4-4.8-5.4,1.9-2.7,4-5.3,6.2-7.6,7-6.4,15.1-12.1,23.7-15.5,21.5-8.6,46.2-3.1,65.8,8.2,2.8,1.6,5.5,3.3,8.1,5.2-2.8,22.1-4.7,44.4-5.6,66.6-.3,7.2-.7,17.3-.9,24.5-.5,29.1,4.3,58.3,14.9,85.4,6.8,16.6,20,42.4,41.8,38.7,37.1-6.6,37-53.5,33.2-82.8-3.2-24.8-11.2-48.7-22-71.1ZM397.5,671.4c1.4,32,1.6,64.5-3.4,96.2-3.1,17.4-10.3,52.2-33.2,49.7-14.9-1.7-25.2-14.1-30.1-27.8-13.3-38.7-3.7-90,12.7-126.7,11.1-24,26.3-55.4,45.9-78.8,3.9,29.1,6.6,58.3,8.1,87.6ZM523.5,618c2.5,7.4,4.3,15,5.4,22.8,2.2,15.8,4.6,32,5.3,47.9.2,7,.4,15.2-2.8,21.1-1.6,2.7-3.9,4.2-6.8,5.4-10.3,4.1-16.5-7.8-19.6-16.1-5.1-14.5-6-30.7-4.9-46,.8-11.8,3.1-23.5,6.4-34.9,2.1-7.5,4.4-14.9,7-22.2,4.2,7.1,7.6,14.6,9.9,22.1ZM573.9,615.7c-1.1.6-2.6,1-3.5.4-2.5-2-2.9-6.3-3.3-9.7-.4-7.3.7-15.2,2.7-22.4.6-2.1,1.2-4.1,2-6.2,4.5,13.8,8.7,32.6,2.1,37.9ZM617,542.1c3.3,5.7,3,14.3,3,20.9-.3,5-1.1,16.7-7.1,17.2-1.4,0-2.5-.2-3.4-1.6-3.1-5.7-1.6-13.6-.4-19.9,1.5-6.3,3.6-12.6,6.5-18.5.5.5,1,1.1,1.4,1.9ZM796.9,701.8c-3.2,13.2-11.5,24.3-25.7,25.4-7.7.5-13.8-6.3-18.2-12.3-8.8-12.6-14.1-28-18-43-4.7-19.3-7-39.2-7.2-59,.1-11.2.2-25.1.7-36.3.6-16.5,1.6-33,3.2-49.4,46,38.1,77.3,120.1,65.2,174.6Z"/>
+         <path style="fill: #fff;" d="M467.6,446.3c-1.1-2.2-.5-5.2.2-7,1.4-3.5,2.4-7,4.6-10.3.3-.5,1.7-.5,2.5-.8h1.6c.8,0,2.5.4,2.8.9,1.7,3.4,2.3,7.5,2.7,11.3s.9,4.7-.4,6.7c-1.8,2.7-12.6,2.1-14-.8Z"/>
+      </symbol>
+   </svg>
+      <div class="container">
+      <div class="py-2">
+         <svg class="mx-auto d-block" width="100" height="100"><use xlink:href="#fdphy"></use></svg>
+         <div class="text-center social py-2">
+            <a href="https://youtube.com/fdphy/?sub_confirmation=1" class="text-decoration-none text-dark h4">
+            <i class="bi bi-youtube"></i>
+            </a> 
+            <a href="https://facebook.com/fdphy" class="text-decoration-none text-dark h4">
+            <i class="bi bi-facebook"></i>
+            </a> 
+            <a href="https://twitter.com/fdphy" class="text-decoration-none text-dark h4">
+            <i class="bi bi-twitter-x"></i>
+            </a> 
+            <a href="https://instagram.com/fdphy" class="text-decoration-none text-dark h4">
+            <i class="bi bi-instagram"></i>
+            </a> 
+            <a href="https://fdiengdoh.com" class="text-decoration-none text-dark h4">
+            <i class="bi bi-globe"></i>
+            </a> 
+         </div>
+         <div class="text-center">
+            @fdphy
+         </div>
+      </div>
+      <div class="col-lg-8 mx-auto">
+<?php foreach($links as $link):  ?>
+            <a href="<?= $link['link'] ?>" class="btn text-start my-4 p-3" target="_blank"><?= $link['icon'] ?> &raquo; <?= $link['title'] ?></a>
+<?php endforeach; ?>
+            <div class="text-center">Connect with @fdphy</div>
+            <!-- Social accounts links -->
+            <a href="https://wa.me/+919362314134" class="btn text-start my-4 p-3" target="_blank"><i class="bi bi-whatsapp"></i> /fdphy - Let us Chat</i>
+            <a href="https://www.youtube.com/fdphy/?sub_confirmation=1" class="btn text-start my-4 p-3" target="_blank"><i class="bi bi-youtube"></i> /fdphy - YouTube</a>
+            <a href="https://www.facebook.com/fdphy" class="btn text-start my-4 p-3" target="_blank"><i class="bi bi-facebook"></i> /fdphy - Facebook</a>
+            <a href="https://www.instagram.com/fdphy" class="btn text-start my-4 p-3" target="_blank"><i class="bi bi-instagram"></i> /fdphy - Instagram</a>
+            <a href="https://www.twitter.com/fdphy_in" class="btn text-start my-4 p-3" target="_blank"><i class="bi bi-twitter-x"></i> /fdphy_in - X (Twitter)</a>
+            <a href="https://www.fdiengdoh.com" class="btn text-start my-4 p-3" target="_blank"><i class="bi bi-globe"></i> Website &raquo; fdiengdoh.com</a>
+        </div>
+        <div class="py-2">
+            <div class="text-center social py-2">
+                <a href="https://youtube.com/fdphy/?sub_confirmation=1" class="text-decoration-none text-dark h4">
+                <i class="bi bi-youtube"></i>
+                </a> 
+                <a href="https://facebook.com/fdphy" class="text-decoration-none text-dark h4">
+                <i class="bi bi-facebook"></i>
+                </a> 
+                <a href="https://twitter.com/fdphy" class="text-decoration-none text-dark h4">
+                <i class="bi bi-twitter-x"></i>
+                </a> 
+                <a href="https://instagram.com/fdphy" class="text-decoration-none text-dark h4">
+                <i class="bi bi-instagram"></i>
+                </a> 
+                <a href="https://fdiengdoh.com" class="text-decoration-none text-dark h4">
+                <i class="bi bi-globe"></i>
+                </a> 
+            </div>
+            <div class="text-center">
+                Copyrights 2010 - <script>document.write(new Date().getFullYear())</script> &copy <a href="https://fdh.pw" class="text-decoration-none text-dark">fdh.pw</a>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
