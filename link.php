@@ -1,6 +1,7 @@
 <?php
   $links = [
     //Add New Link on this line using this format [ 'link' => 'link-url-here', 'icon' => 'bootstrap-icon here', 'title' => 'Title of the Link' ]
+      [ 'link' => 'https://www.fdiengdoh.com/2025/02/link-list-for-my-social-media.html', 'icon' => '<i class="bi bi-link-45deg"></i>', 'title' => 'My Own Social Media Link List' ],
       [ 'link' => 'https://www.fdiengdoh.com/2023/01/calendar-2023.html', 'icon' => '<i class="bi bi-link-45deg"></i>', 'title' => 'Ka Kyrteng jong ki Bnai ha ka Ktien Khasi' ],
       [ 'link' => 'https://www.fdiengdoh.com/2022/04/useful-email-aliases-using-google-mail.html', 'icon' => '<i class="bi bi-link-45deg"></i>', 'title' => 'Useful Email Aliases using GMail' ],
       [ 'link' => 'https://www.fdiengdoh.com/2020/07/ka-ei-ka-vaccine.html', 'icon' => '<i class="bi bi-link-45deg"></i>', 'title' => 'Ka ei ka Baksin (Vaccine)?' ],
