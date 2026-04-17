@@ -117,7 +117,7 @@
         <!-- Links -->
         <div class="links">
     <?php foreach($links as $link):  ?>
-            <a href="<?= $link->link ?>" class="btn text-start my-4 p-3" target="_blank"> <?= preg_replace($pattern,$replacement,$link->title) ?></a>
+            <a href="<?= $link['link'] ?>" target="_blank"> <?= $link['icon'] ?> <?= $link['title'] ?></a>
     <?php endforeach; ?>
             <div>Connect with @fdphy</div>   
             <!-- Social accounts links -->
