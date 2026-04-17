@@ -6,12 +6,12 @@ This is a Link List webapp similar to linktree. The Link List include the follow
 - Links
 
 How this app was created?
-This app is created in local environment using PHP and I have used [Bootstrap](https://getbootstrap.com/) for styling with a few minor adjustment to my taste. I also use bootstrap icon and just include those via cdn. To add new links edit the file [link.php](link.php) and add new links to this section below: 
+This app is created in local environment using PHP and I have used a simple custom css for styling with fontawesome icons. To add new links edit the file [link.php](link.php) and add new links to this section below: 
 
 ```
 <?php
   $links = [
-      //Add New Link on this line using this format [ 'link' => 'link-url-here', 'icon' => 'bootstrap-icon here', 'title' => 'Title of the Link' ]
+      //Add New Link on this line using this format [ 'link' => 'link-url-here', 'icon' => 'fontawesome-icon here', 'title' => 'Title of the Link' ]
       [ 'link' => 'https://www.fdiengdoh.com/2023/01/calendar-2023.html', 'icon' => '<i class="bi bi-link-45deg"></i>', 'title' => 'Ka Kyrteng jong ki Bnai ha ka Ktien Khasi' ],
       [ 'link' => 'https://www.fdiengdoh.com/2022/04/useful-email-aliases-using-google-mail.html', 'icon' => '<i class="bi bi-link-45deg"></i>', 'title' => 'Useful Email Aliases using GMail' ],
       [ 'link' => 'https://www.fdiengdoh.com/2020/07/ka-ei-ka-vaccine.html', 'icon' => '<i class="bi bi-link-45deg"></i>', 'title' => 'Ka ei ka Baksin (Vaccine)?' ],
@@ -28,7 +28,7 @@ This app is created in local environment using PHP and I have used [Bootstrap](h
 The link is in this format
 
 ```
-[ 'link' => 'link-url-here', 'icon' => 'bootstrap-icon here', 'title' => 'Title of the Link' ]
+[ 'link' => 'link-url-here', 'icon' => 'fontawesome-icon here', 'title' => 'Title of the Link' ]
 ```
 
 The above [file](link.php) is then converted to html file using a simple command in linux as follows
