@@ -1,6 +1,6 @@
 <?php
   $links = [
-    //Add New Link on this line using this format [ 'link' => 'link-url-here', 'icon' => 'bootstrap-icon here', 'title' => 'Title of the Link' ]
+    //Add New Link on this line using this format [ 'link' => 'link-url-here', 'icon' => 'fontawesome-icon here', 'title' => 'Title of the Link' ]
       [ 'link' => 'https://www.fdiengdoh.com/2025/02/link-list-for-my-social-media.html', 'icon' => '<i class="fa-solid fa-link"></i> &raquo; ', 'title' => 'My Own Social Media Link List' ],
       [ 'link' => 'https://www.fdiengdoh.com/2023/01/calendar-2023.html', 'icon' => '<i class="fa-solid fa-link"></i> &raquo; ', 'title' => 'Ka Kyrteng jong ki Bnai ha ka Ktien Khasi' ],
       [ 'link' => 'https://www.fdiengdoh.com/2022/04/useful-email-aliases-using-google-mail.html', 'icon' => '<i class="fa-solid fa-link"></i> &raquo; ', 'title' => 'Useful Email Aliases using GMail' ],
