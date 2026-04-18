@@ -6,7 +6,7 @@ This is a Link List webapp similar to linktree. The Link List include the follow
 - Links
 
 How this app was created?
-This app is created in local environment using PHP and I have used a simple custom css for styling with [fontawesome icons](https://fontawesome.com/icons). To add new links edit the file [link.php](link.php) and add new links to this section below: 
+This app is created in local environment using PHP and I have used a simple custom css for styling with selected icons from [fontawesome icons](https://fontawesome.com/icons) as svg sprite to reduce size. To add new links edit the file [link.php](link.php) and add new links to this section below: 
 
 ```
 <?php
