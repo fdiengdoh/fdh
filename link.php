@@ -1,17 +1,20 @@
 <?php
   $links = [
-    //Add New Link on this line using this format [ 'link' => 'link-url-here', 'icon' => 'fontawesome-icon here', 'title' => 'Title of the Link' ]
-      [ 'link' => 'https://www.fdiengdoh.com/2025/02/link-list-for-my-social-media.html', 'icon' => '<i class="fa-solid fa-link"></i> &raquo; ', 'title' => 'My Own Social Media Link List' ],
-      [ 'link' => 'https://www.fdiengdoh.com/2023/01/calendar-2023.html', 'icon' => '<i class="fa-solid fa-link"></i> &raquo; ', 'title' => 'Ka Kyrteng jong ki Bnai ha ka Ktien Khasi' ],
-      [ 'link' => 'https://www.fdiengdoh.com/2022/04/useful-email-aliases-using-google-mail.html', 'icon' => '<i class="fa-solid fa-link"></i> &raquo; ', 'title' => 'Useful Email Aliases using GMail' ],
-      [ 'link' => 'https://www.fdiengdoh.com/2020/07/ka-ei-ka-vaccine.html', 'icon' => '<i class="fa-solid fa-link"></i> &raquo; ', 'title' => 'Ka ei ka Baksin (Vaccine)?' ],
-      [ 'link' => 'https://youtu.be/tTNKS6CsG3o', 'icon' => '<i class="fa-solid fa-video"></i> &raquo; ', 'title' => 'Ka Hima Lyngiong' ],
-      [ 'link' => 'https://youtu.be/fix8QC_rlY8', 'icon' => '<i class="fa-solid fa-video"></i> &raquo; ', 'title' => 'Resonate Router UPS: A Review'],
-      [ 'link' => 'https://youtu.be/RRSOQHD1H50', 'icon' => '<i class="fa-solid fa-video"></i> &raquo; ', 'title' => "Meghalaya - a bird's eye view"],
-      [ 'link' => 'https://youtu.be/GmoQa8Y61TE', 'icon' => '<i class="fa-solid fa-video"></i> &raquo; ', 'title' => "Phe Phe Falls - Jaiñtia Hills"],
-      [ 'link' => 'https://www.youtube.com/playlist?list=PLnAxMOVwqslFysqxWXNin2Y2w5J2y17Od', 'icon' => '<i class="fa-solid fa-video"></i> &raquo; ', 'title' => "Travel - Vlogs"],
-      [ 'link' => 'https://www.youtube.com/playlist?list=PLnAxMOVwqslEjju22ao-CcfceynfUpVXt', 'icon' => '<i class="fa-solid fa-video"></i> &raquo; ', 'title' => "Unboxing - Tutorials"],
+    //Add New Link on this line using this format [ 'link' => 'link-url-here', 'icon' => 'icon here', 'title' => 'Title of the Link' ]
+      [ 'link' => 'https://www.fdiengdoh.com/2025/02/link-list-for-my-social-media.html', 'icon' => 'link-icon', 'title' => 'My Own Social Media Link List' ],
+      [ 'link' => 'https://www.fdiengdoh.com/2023/01/calendar-2023.html', 'icon' => 'link-icon', 'title' => 'Ka Kyrteng jong ki Bnai ha ka Ktien Khasi' ],
+      [ 'link' => 'https://www.fdiengdoh.com/2022/04/useful-email-aliases-using-google-mail.html', 'icon' => 'link-icon', 'title' => 'Useful Email Aliases using GMail' ],
+      [ 'link' => 'https://www.fdiengdoh.com/2020/07/ka-ei-ka-vaccine.html', 'icon' => 'link-icon', 'title' => 'Ka ei ka Baksin (Vaccine)?' ],
+      [ 'link' => 'https://youtu.be/tTNKS6CsG3o', 'icon' => 'video-icon', 'title' => 'Ka Hima Lyngiong' ],
+      [ 'link' => 'https://youtu.be/fix8QC_rlY8', 'icon' => 'video-icon', 'title' => 'Resonate Router UPS: A Review'],
+      [ 'link' => 'https://youtu.be/RRSOQHD1H50', 'icon' => 'video-icon', 'title' => "Meghalaya - a bird's eye view"],
+      [ 'link' => 'https://youtu.be/GmoQa8Y61TE', 'icon' => 'video-icon', 'title' => "Phe Phe Falls - Jaiñtia Hills"],
+      [ 'link' => 'https://www.youtube.com/playlist?list=PLnAxMOVwqslFysqxWXNin2Y2w5J2y17Od', 'icon' => 'video-icon', 'title' => "Travel - Vlogs"],
+      [ 'link' => 'https://www.youtube.com/playlist?list=PLnAxMOVwqslEjju22ao-CcfceynfUpVXt', 'icon' => 'video-icon', 'title' => "Unboxing - Tutorials"],
   ];
+    //This pattern is to generate icons base on title obtained from array.
+    $pattern         = [ "/video-icon/i","/link-icon/i"];
+    $replacement     = [ '<svg class="svg-icons"><use href="#video"></use></svg>', '<svg class="svg-icons"><use href="#link"></use></svg>'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -22,10 +25,7 @@
       <meta name="keywords" content="linktree, links, social, media">
       <meta name="author" content="Farlando Diengdoh">
       <link rel="icon" href="ltree/favicon.png" type="image/png" >
-      <title>FDPHY Links</title>
-      <!-- Font Awesome for icons -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+      <title>fdiengdoh.com Link List</title>
       <style>
           body {
               margin: 0;
@@ -95,6 +95,15 @@
               font-size: 14px;
               color: #94a3b8;
           }
+
+          .svg-icons {
+            box-sizing: content-box;
+            display: inline-block;
+            height: 1.2em;
+            overflow: visible;
+            vertical-align: -0.125em;
+            width: 1.25em;
+        }
       </style>
    </head>
    <body>
@@ -107,40 +116,41 @@
     
         <!-- Top Social -->
         <div class="social">
-            <a href="https://www.facebook.com/fdphy" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.youtube.com/fdphy/?sub_confirmation=1" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.x.com/fdphy_in" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/fdphy" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.fdiengdoh.com" target="_blank" title="Website"><i class="fa-brands fa-safari"></i></a>
+            <a href="https://www.facebook.com/fdphy" target="_blank" title="Facebook"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#facebook"></use></svg></a>
+            <a href="https://www.youtube.com/fdphy" target="_blank" title="YouTube"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#youtube"></use></svg></a>
+            <a href="https://www.x.com/fdphy_in" target="_blank" title="X (Twitter)"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#x-twitter"></use></svg></a>
+            <a href="https://www.instagram.com/fdphy" target="_blank" title="Instagram"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#instagram"></use></svg></a>
+            <a href="https://www.fdiengdoh.com" target="_blank" title="Website"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#safari"></use></svg></a>
         </div>
     
         <!-- Links -->
         <div class="links">
     <?php foreach($links as $link):  ?>
-            <a href="<?= $link['link'] ?>" target="_blank"> <?= $link['icon'] ?> <?= $link['title'] ?></a>
+            <a href="<?= $link['link'] ?>" target="_blank"> <?= preg_replace($pattern,$replacement,$link['icon']) ?> &raquo; <?= $link['title'] ?></a>
     <?php endforeach; ?>
             <div>Connect with @fdphy</div>   
             <!-- Social accounts links -->
-            <a href="https://whatsapp.com/channel/0029Va9VuhPI1rcehvL1h91F" class="link-button" target="_blank"><i class="fa-brands fa-whatsapp"></i>/fdphy - WhatsApp</a>
-            <a href="https://www.youtube.com/fdphy/?sub_confirmation=1" class="link-button" target="_blank"><i class="fa-brands fa-youtube"></i> /fdphy - YouTube</a>
-            <a href="https://www.facebook.com/fdphy" class="link-button" target="_blank"><i class="fa-brands fa-facebook"></i> /fdphy - Facebook</a>
-            <a href="https://www.instagram.com/fdphy" class="link-button" target="_blank"><i class="fa-brands fa-instagram"></i> /fdphy - Instagram</a>
-            <a href="https://www.twitter.com/fdphy_in" class="link-button" target="_blank"><i class="fa-brands fa-x-twitter"></i> /fdphy_in - X (Twitter)</a>
-            <a href="https://www.fdiengdoh.com" class="link-button" target="_blank"><i class="fa-brands fa-safari"></i> Website » fdiengdoh.com</a>
+            <a href="https://whatsapp.com/channel/0029Va9VuhPI1rcehvL1h91F" class="link-button" target="_blank"><svg class="svg-icons"><use href="#whatsapp"></use></svg>/fdphy - WhatsApp</a>
+            <a href="https://www.youtube.com/fdphy/?sub_confirmation=1" class="link-button" target="_blank"><svg class="svg-icons"><use href="#youtube"></use></svg> /fdphy - YouTube</a>
+            <a href="https://www.facebook.com/fdphy" class="link-button" target="_blank"><svg class="svg-icons"><use href="#facebook"></use></svg> /fdphy - Facebook</a>
+            <a href="https://www.instagram.com/fdphy" class="link-button" target="_blank"><svg class="svg-icons"><use href="#instagram"></use></svg> /fdphy - Instagram</a>
+            <a href="https://www.twitter.com/fdphy_in" class="link-button" target="_blank"><svg class="svg-icons"><use href="#x-twitter"></use></svg> /fdphy_in - X (Twitter)</a>
+            <a href="https://github.com/fdiengdoh" class="link-button" target="_blank"><svg class="svg-icons"><use href="#github"></use></svg> /fdiengdoh - GitHub</a>
+            <a href="https://www.fdiengdoh.com" class="link-button" target="_blank"><svg class="svg-icons"><use href="#safari"></use></svg> Website » fdiengdoh.com</a>
         </div>
     
         <!-- Bottom Social -->
         <div class="social">
-            <a href="https://www.facebook.com/fdphy" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.youtube.com/fdphy/?sub_confirmation=1" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.x.com/fdphy_in" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/fdphy" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.fdiengdoh.com" target="_blank" title="Website"><i class="fa-brands fa-safari"></i></a>
+            <a href="https://www.facebook.com/fdphy" target="_blank" title="Facebook"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#facebook"></use></svg></a>
+            <a href="https://www.youtube.com/fdphy" target="_blank" title="YouTube"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#youtube"></use></svg></a>
+            <a href="https://www.x.com/fdphy_in" target="_blank" title="X (Twitter)"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#x-twitter"></use></svg></a>
+            <a href="https://www.instagram.com/fdphy" target="_blank" title="Instagram"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#instagram"></use></svg></a>
+            <a href="https://www.fdiengdoh.com" target="_blank" title="Website"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#safari"></use></svg></a>
         </div>
     
         <!-- Footer -->
         <div class="footer">
-            Copyrights 2010 - <span id="year"></span> &copy; <a href="https://fdh.pw">fdh.pw</a>
+            Copyrights 2010 - <script>document.write(new Date().getFullYear())</script>2026 © <a href="https://fdh.pw">fdh.pw</a>
         </div>
     
     </div>
@@ -152,9 +162,38 @@
             <path style="fill: #fff;" d="M785.9,583c-12.7-25.7-29.8-50.2-53-67.5,3-27.9,7.6-55.6,14-83,14.6-63.2,38-124.1,64.1-183.4-14,29.3-27.2,59-39.1,89.3-22.1,55.4-37.5,113.4-45.9,172.4-1.5-1-3-1.9-4.6-2.9-14.8-8.6-31.6-13.8-48.9-13.8-18.5-.2-36.5,8.2-50.1,20.3-4,3.4-7.9,8-11.3,13.3-7.8-.9-16.6,2.3-22.6,7.8-6,5.7-11.5,12-16,19-6.9-11.1-17.1-18.5-32.4-13.4-12.1,4.2-21.8,19-28.9,34.3-23.7-28.8-60.4-45.5-97.1-26-6.4,3.6-12.3,7.9-17.7,12.7-2.3-15.5-4.5-28.3-6.2-36.9-6-32.2-13.7-64.7-28.2-94.3-17.8-37.3-47.4-72.7-88.7-84.2-37.3-10.6-79.6,1.5-104.5,31.6-44.2,53.2-45.2,137.4-32.1,202.2,18.2,87.8,63.8,147.1,144.3,186.5-59.5-31.7-103.8-76.5-125.3-141.3-24.2-71.3-28.2-166.5,13.7-231.7,26.3-40.9,80.9-52.7,122.6-28.9,27.6,15.3,47.4,41.9,61,70.1,14.1,28.9,21.4,60.3,27.4,91.8,2.7,14.5,5.1,29.1,7.2,43.7-15.1,16.1-26.7,35.9-37,54.7-7.6,14.6-15,29.3-21,44.6-11.6,31.2-17.4,64.7-13.9,98,2.4,19,8.5,39.7,24.9,51.6,9.6,6.6,22.3,10.2,33.6,5.6,46.8-20.2,35.7-165.9,24-251,6.5-6.5,13.4-12,20.7-16.1,33.7-18,67.1,0,87.8,27.6-2.6,6.6-4.8,12.9-6.4,17.8-7.8,23.8-12.5,48.8-10,73.9,1.6,15.8,6.4,39,22.2,46.8,9.8,4.5,22.2-.5,27.5-9.5,4.6-8.1,4.4-17.7,4.2-26.5-.3-8.4-1.2-16.5-2.2-24.7-2.2-16.4-3.6-33.1-9.1-48.8-3.4-10.6-8.5-20.9-14.9-30.4,0,0,0-.1,0-.2,5-11.1,13.1-27.8,24-33.4,12.4-5,19.5,3,24.5,13.6-4.7,9.2-7.8,19.1-9.1,29.5-.8,6.5-1.1,13.4.6,20,2.3,10,11.1,15.7,20.8,10.3,15.2-9.5,5.9-38.6,1.5-52-.8-2.5-1.7-4.9-2.7-7.4,4.2-7.4,9.5-14.1,15.4-20.1,1.2-1.2,2.5-2.5,3.9-3.5,2.4-1.7,5.4-3.1,8.5-3.7-6,12.8-9.3,27.5-7.5,39,.7,3.8,2.6,8.4,6.1,11,5.1,3.8,12.8,3.3,17.5-.8,6.5-5.9,7.6-15.5,8-23.4.2-4.3,0-8.6-.4-12.8-.4-4.4-1.3-9.3-4.1-13.8-1.4-2.2-3-4-4.8-5.4,1.9-2.7,4-5.3,6.2-7.6,7-6.4,15.1-12.1,23.7-15.5,21.5-8.6,46.2-3.1,65.8,8.2,2.8,1.6,5.5,3.3,8.1,5.2-2.8,22.1-4.7,44.4-5.6,66.6-.3,7.2-.7,17.3-.9,24.5-.5,29.1,4.3,58.3,14.9,85.4,6.8,16.6,20,42.4,41.8,38.7,37.1-6.6,37-53.5,33.2-82.8-3.2-24.8-11.2-48.7-22-71.1ZM397.5,671.4c1.4,32,1.6,64.5-3.4,96.2-3.1,17.4-10.3,52.2-33.2,49.7-14.9-1.7-25.2-14.1-30.1-27.8-13.3-38.7-3.7-90,12.7-126.7,11.1-24,26.3-55.4,45.9-78.8,3.9,29.1,6.6,58.3,8.1,87.6ZM523.5,618c2.5,7.4,4.3,15,5.4,22.8,2.2,15.8,4.6,32,5.3,47.9.2,7,.4,15.2-2.8,21.1-1.6,2.7-3.9,4.2-6.8,5.4-10.3,4.1-16.5-7.8-19.6-16.1-5.1-14.5-6-30.7-4.9-46,.8-11.8,3.1-23.5,6.4-34.9,2.1-7.5,4.4-14.9,7-22.2,4.2,7.1,7.6,14.6,9.9,22.1ZM573.9,615.7c-1.1.6-2.6,1-3.5.4-2.5-2-2.9-6.3-3.3-9.7-.4-7.3.7-15.2,2.7-22.4.6-2.1,1.2-4.1,2-6.2,4.5,13.8,8.7,32.6,2.1,37.9ZM617,542.1c3.3,5.7,3,14.3,3,20.9-.3,5-1.1,16.7-7.1,17.2-1.4,0-2.5-.2-3.4-1.6-3.1-5.7-1.6-13.6-.4-19.9,1.5-6.3,3.6-12.6,6.5-18.5.5.5,1,1.1,1.4,1.9ZM796.9,701.8c-3.2,13.2-11.5,24.3-25.7,25.4-7.7.5-13.8-6.3-18.2-12.3-8.8-12.6-14.1-28-18-43-4.7-19.3-7-39.2-7.2-59,.1-11.2.2-25.1.7-36.3.6-16.5,1.6-33,3.2-49.4,46,38.1,77.3,120.1,65.2,174.6Z"/>
             <path style="fill: #fff;" d="M467.6,446.3c-1.1-2.2-.5-5.2.2-7,1.4-3.5,2.4-7,4.6-10.3.3-.5,1.7-.5,2.5-.8h1.6c.8,0,2.5.4,2.8.9,1.7,3.4,2.3,7.5,2.7,11.3s.9,4.7-.4,6.7c-1.8,2.7-12.6,2.1-14-.8Z"/>
         </symbol>
+        <!--! Adding only icons that I use in this page to reduce the size of the SVG file.
+        Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com
+        License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+        Copyright 2026 Fonticons, Inc.
+        -->
+        <symbol id="facebook" viewBox="0 0 640 640">
+        <path fill="currentColor" d="M576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 440 146.7 540.8 258.2 568.5L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 574.1C477.8 558.8 576 450.9 576 320z"/>
+        </symbol>
+        <symbol id="youtube" viewBox="0 0 640 640">
+        <path fill="currentColor" d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z"/>
+        </symbol>
+        <symbol id="x-twitter" viewBox="0 0 640 640">
+        <path fill="currentColor" d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"/>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 640 640">
+        <path fill="currentColor" d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 205zM319.7 245.4C360.9 245.2 394.4 278.5 394.6 319.7C394.8 360.9 361.5 394.4 320.3 394.6C279.1 394.8 245.6 361.5 245.4 320.3C245.2 279.1 278.5 245.6 319.7 245.4zM413.1 200.3C413.1 185.5 425.1 173.5 439.9 173.5C454.7 173.5 466.7 185.5 466.7 200.3C466.7 215.1 454.7 227.1 439.9 227.1C425.1 227.1 413.1 215.1 413.1 200.3zM542.8 227.5C541.1 191.6 532.9 159.8 506.6 133.6C480.4 107.4 448.6 99.2 412.7 97.4C375.7 95.3 264.8 95.3 227.8 97.4C192 99.1 160.2 107.3 133.9 133.5C107.6 159.7 99.5 191.5 97.7 227.4C95.6 264.4 95.6 375.3 97.7 412.3C99.4 448.2 107.6 480 133.9 506.2C160.2 532.4 191.9 540.6 227.8 542.4C264.8 544.5 375.7 544.5 412.7 542.4C448.6 540.7 480.4 532.5 506.6 506.2C532.8 480 541 448.2 542.8 412.3C544.9 375.3 544.9 264.5 542.8 227.5zM495 452C487.2 471.6 472.1 486.7 452.4 494.6C422.9 506.3 352.9 503.6 320.3 503.6C287.7 503.6 217.6 506.2 188.2 494.6C168.6 486.8 153.5 471.7 145.6 452C133.9 422.5 136.6 352.5 136.6 319.9C136.6 287.3 134 217.2 145.6 187.8C153.4 168.2 168.5 153.1 188.2 145.2C217.7 133.5 287.7 136.2 320.3 136.2C352.9 136.2 423 133.6 452.4 145.2C472 153 487.1 168.1 495 187.8C506.7 217.3 504 287.3 504 319.9C504 352.5 506.7 422.6 495 452z"/>
+        </symbol>
+        <symbol id="safari" viewBox="0 0 640 640">
+        <path fill="currentColor" d="M338.7 338.7L301.3 301.3L230 410L338.7 338.7zM320 72C183 72 72 183 72 320C72 457 183 568 320 568C457 568 568 457 568 320C568 183 457 72 320 72zM475.8 246.8L490.6 240.7C491.6 240.3 492.6 240.1 493.7 240.1C494.8 240.1 495.8 240.3 496.8 240.7C497.8 241.1 498.6 241.7 499.4 242.4C500.2 243.1 500.7 244 501.1 245C501.5 246 501.7 247 501.7 248.1C501.7 249.2 501.5 250.2 501.1 251.2C500.7 252.2 500.1 253.1 499.4 253.8C498.7 254.5 497.8 255.1 496.8 255.5L482 261.6C480 262.4 477.8 262.4 475.9 261.6C474 260.8 472.4 259.2 471.6 257.3C470.8 255.4 470.8 253.1 471.6 251.2C472.4 249.3 474 247.7 475.9 246.9zM378.4 158L384.5 143.2C385.3 141.2 386.9 139.7 388.8 138.9C390.7 138.1 393 138.1 394.9 138.9C396.8 139.7 398.4 141.3 399.2 143.2C400 145.1 400 147.4 399.2 149.3L393.1 164.1C392.3 166.1 390.7 167.6 388.8 168.4C386.9 169.2 384.6 169.2 382.7 168.4C381.7 168 380.8 167.4 380.1 166.7C379.4 166 378.8 165.1 378.4 164.1C378 163.1 377.8 162.1 377.8 161C377.8 159.9 378 158.9 378.4 157.9zM320 124C322.1 124 324.2 124.8 325.7 126.3C327.2 127.8 328 129.9 328 132L328 148C328 150.1 327.2 152.2 325.7 153.7C324.2 155.2 322.2 156 320 156C317.8 156 315.8 155.2 314.3 153.7C312.8 152.2 312 150.2 312 148L312 132C312 129.9 312.8 127.8 314.3 126.3C315.8 124.8 317.9 124 320 124zM245 138.9C246 138.5 247 138.3 248.1 138.3C249.2 138.3 250.2 138.5 251.2 138.9C252.2 139.3 253.1 139.9 253.8 140.6C254.5 141.3 255.1 142.2 255.5 143.2L261.6 158C262 159 262.3 160 262.3 161.1C262.3 162.2 262.1 163.2 261.7 164.2C261.3 165.2 260.7 166.1 260 166.8C259.3 167.5 258.4 168.2 257.4 168.6C256.4 169 255.4 169.2 254.3 169.2C253.2 169.2 252.2 169 251.2 168.6C250.2 168.2 249.3 167.6 248.6 166.8C247.9 166 247.3 165.1 246.9 164.1L240.8 149.3C240 147.3 240 145.1 240.8 143.2C241.6 141.3 243.2 139.7 245.1 138.9zM181.4 181.4C182.9 179.9 184.9 179.1 187.1 179.1C189.3 179.1 191.3 179.9 192.8 181.4L204 192.7C205.5 194.2 206.3 196.2 206.3 198.3C206.3 200.4 205.5 202.4 204 203.9C202.5 205.4 200.5 206.2 198.3 206.2C196.1 206.2 194.1 205.4 192.6 203.9L181.3 192.6C179.8 191.1 179 189.1 179 187C179 184.9 179.8 182.9 181.3 181.4L181.3 181.4zM124 320C124 317.9 124.8 315.8 126.3 314.3C127.8 312.8 129.9 312 132 312L148 312C150.1 312 152.2 312.8 153.7 314.3C155.2 315.8 156 317.8 156 320C156 322.2 155.2 324.2 153.7 325.7C152.2 327.2 150.2 328 148 328L132 328C129.9 328 127.8 327.2 126.3 325.7C124.8 324.2 124 322.1 124 320zM164.2 393.2L149.4 399.3C148.4 399.7 147.4 399.9 146.3 399.9C145.2 399.9 144.2 399.7 143.2 399.3C142.2 398.9 141.3 398.3 140.6 397.6C139.9 396.9 139.3 396 138.9 395C138.5 394 138.3 393 138.3 391.9C138.3 390.8 138.5 389.8 138.9 388.8C139.3 387.8 139.9 386.9 140.6 386.2C141.3 385.5 142.2 384.9 143.2 384.5L158 378.4C160 377.6 162.2 377.6 164.1 378.4C166 379.2 167.6 380.8 168.4 382.7C169.2 384.6 169.2 386.9 168.4 388.8C167.6 390.7 166 392.3 164.1 393.1zM168.5 257.2C168.1 258.2 167.5 259.1 166.8 259.8C166.1 260.5 165.2 261.1 164.2 261.5C163.2 261.9 162.2 262.1 161.1 262.1C160 262.1 159 261.9 158 261.5L143.2 255.4C141.2 254.6 139.7 253 138.9 251.1C138.1 249.2 138.1 246.9 138.9 245C139.7 243.1 141.3 241.5 143.2 240.7C145.1 239.9 147.4 239.9 149.3 240.7L164.1 246.8C166.1 247.6 167.6 249.2 168.4 251.1C169.2 253 169.2 255.3 168.4 257.2L168.4 257.2zM261.6 482L255.5 496.8C255.1 497.8 254.5 498.7 253.8 499.4C253.1 500.1 252.2 500.7 251.2 501.1C250.2 501.5 249.2 501.7 248.1 501.7C247 501.7 246 501.5 245 501.1C244 500.7 243.1 500.1 242.4 499.4C241.7 498.7 241.1 497.8 240.7 496.8C240.3 495.8 240.1 494.8 240.1 493.7C240.1 492.6 240.3 491.6 240.7 490.6L246.8 475.8C247.2 474.8 247.8 473.9 248.5 473.1C249.2 472.3 250.1 471.7 251.1 471.3C252.1 470.9 253.1 470.7 254.2 470.7C255.3 470.7 256.3 470.9 257.3 471.3C258.3 471.7 259.2 472.3 259.9 473.1C260.6 473.9 261.2 474.8 261.6 475.7C262 476.6 262.2 477.7 262.2 478.8C262.2 479.9 262 480.9 261.5 481.9zM328 508C328 510.1 327.2 512.2 325.7 513.7C324.2 515.2 322.2 516 320 516C317.8 516 315.8 515.2 314.3 513.7C312.8 512.2 312 510.2 312 508L312 492C312 489.9 312.8 487.8 314.3 486.3C315.8 484.8 317.8 484 320 484C322.2 484 324.2 484.8 325.7 486.3C327.2 487.8 328 489.8 328 492L328 508zM395 501.1C394 501.5 393 501.7 391.9 501.7C390.8 501.7 389.8 501.5 388.8 501.1C387.8 500.7 386.9 500.1 386.2 499.4C385.5 498.7 384.9 497.8 384.5 496.8L378.4 482C377.6 480 377.6 477.8 378.4 475.9C379.2 474 380.8 472.4 382.7 471.6C384.6 470.8 386.9 470.8 388.8 471.6C390.7 472.4 392.3 474 393.1 475.9L399.2 490.7C400 492.7 400 494.9 399.2 496.8C398.4 498.7 396.8 500.3 394.9 501.1zM458.6 458.6C457.1 460.1 455.1 460.9 452.9 460.9C450.7 460.9 448.7 460.1 447.2 458.6L436 447.3C434.5 445.8 433.7 443.8 433.7 441.7C433.7 439.6 434.5 437.6 436 436.1C437.5 434.6 439.5 433.8 441.7 433.8C443.9 433.8 445.9 434.6 447.4 436.1L458.7 447.4C460.2 448.9 461 450.9 461 453C461 455.1 460.2 457.1 458.7 458.6L458.7 458.6zM350.2 350.2L174.3 465.7L289.8 289.8L465.7 174.3L350.2 350.2zM501.1 395C500.3 397 498.7 398.5 496.8 399.3C494.9 400.1 492.6 400.1 490.7 399.3L475.9 393.2C473.9 392.4 472.4 390.8 471.6 388.9C470.8 387 470.8 384.7 471.6 382.8C472 381.8 472.6 380.9 473.3 380.2C474 379.5 474.9 378.9 475.9 378.5C476.9 378.1 477.9 377.9 479 377.9C480.1 377.9 481.1 378.1 482.1 378.5L496.9 384.6C498.9 385.4 500.4 387 501.2 388.9C502 390.8 502 393.1 501.2 395zM508 328L492 328C489.9 328 487.8 327.2 486.3 325.7C484.8 324.2 484 322.2 484 320C484 317.8 484.8 315.8 486.3 314.3C487.8 312.8 489.8 312 492 312L508 312C510.1 312 512.2 312.8 513.7 314.3C515.2 315.8 516 317.8 516 320C516 322.2 515.2 324.2 513.7 325.7C512.2 327.2 510.2 328 508 328z"/>
+        </symbol>
+        <symbol id="github" viewBox="0 0 640 640">
+        <path fill="currentColor" d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z"/>
+        </symbol>
+        <symbol id="whatsapp" viewBox="0 0 640 640">
+        <path fill="currentColor" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/>
+        </symbol>
+        <symbol id="link" viewBox="0 0 640 640">
+        <path fill="currentColor" d="M451.5 160C434.9 160 418.8 164.5 404.7 172.7C388.9 156.7 370.5 143.3 350.2 133.2C378.4 109.2 414.3 96 451.5 96C537.9 96 608 166 608 252.5C608 294 591.5 333.8 562.2 363.1L491.1 434.2C461.8 463.5 422 480 380.5 480C294.1 480 224 410 224 323.5C224 322 224 320.5 224.1 319C224.6 301.3 239.3 287.4 257 287.9C274.7 288.4 288.6 303.1 288.1 320.8C288.1 321.7 288.1 322.6 288.1 323.4C288.1 374.5 329.5 415.9 380.6 415.9C405.1 415.9 428.6 406.2 446 388.8L517.1 317.7C534.4 300.4 544.2 276.8 544.2 252.3C544.2 201.2 502.8 159.8 451.7 159.8zM307.2 237.3C305.3 236.5 303.4 235.4 301.7 234.2C289.1 227.7 274.7 224 259.6 224C235.1 224 211.6 233.7 194.2 251.1L123.1 322.2C105.8 339.5 96 363.1 96 387.6C96 438.7 137.4 480.1 188.5 480.1C205 480.1 221.1 475.7 235.2 467.5C251 483.5 269.4 496.9 289.8 507C261.6 530.9 225.8 544.2 188.5 544.2C102.1 544.2 32 474.2 32 387.7C32 346.2 48.5 306.4 77.8 277.1L148.9 206C178.2 176.7 218 160.2 259.5 160.2C346.1 160.2 416 230.8 416 317.1C416 318.4 416 319.7 416 321C415.6 338.7 400.9 352.6 383.2 352.2C365.5 351.8 351.6 337.1 352 319.4C352 318.6 352 317.9 352 317.1C352 283.4 334 253.8 307.2 237.5z"/>
+        </symbol>
+        <symbol id="video" viewBox="0 0 640 640">
+        <path fill="currentColor" d="M128 128C92.7 128 64 156.7 64 192L64 448C64 483.3 92.7 512 128 512L384 512C419.3 512 448 483.3 448 448L448 192C448 156.7 419.3 128 384 128L128 128zM496 400L569.5 458.8C573.7 462.2 578.9 464 584.3 464C597.4 464 608 453.4 608 440.3L608 199.7C608 186.6 597.4 176 584.3 176C578.9 176 573.7 177.8 569.5 181.2L496 240L496 400z"/>
+        </symbol>
     </svg>
-     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
    </body>
 </html>
