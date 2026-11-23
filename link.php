@@ -1,16 +1,18 @@
 <?php
   $links = [
-    //Add New Link on this line using this format [ 'link' => 'link-url-here', 'icon' => 'icon here', 'title' => 'Title of the Link' ]
-      [ 'link' => 'https://www.fdiengdoh.com/2025/02/link-list-for-my-social-media.html', 'icon' => 'link-icon', 'title' => 'My Own Social Media Link List' ],
-      [ 'link' => 'https://www.fdiengdoh.com/2023/01/calendar-2023.html', 'icon' => 'link-icon', 'title' => 'Ka Kyrteng jong ki Bnai ha ka Ktien Khasi' ],
-      [ 'link' => 'https://www.fdiengdoh.com/2022/04/useful-email-aliases-using-google-mail.html', 'icon' => 'link-icon', 'title' => 'Useful Email Aliases using GMail' ],
-      [ 'link' => 'https://www.fdiengdoh.com/2020/07/ka-ei-ka-vaccine.html', 'icon' => 'link-icon', 'title' => 'Ka ei ka Baksin (Vaccine)?' ],
-      [ 'link' => 'https://youtu.be/tTNKS6CsG3o', 'icon' => 'video-icon', 'title' => 'Ka Hima Lyngiong' ],
-      [ 'link' => 'https://youtu.be/fix8QC_rlY8', 'icon' => 'video-icon', 'title' => 'Resonate Router UPS: A Review'],
-      [ 'link' => 'https://youtu.be/RRSOQHD1H50', 'icon' => 'video-icon', 'title' => "Meghalaya - a bird's eye view"],
-      [ 'link' => 'https://youtu.be/GmoQa8Y61TE', 'icon' => 'video-icon', 'title' => "Phe Phe Falls - Jaiñtia Hills"],
-      [ 'link' => 'https://www.youtube.com/playlist?list=PLnAxMOVwqslFysqxWXNin2Y2w5J2y17Od', 'icon' => 'video-icon', 'title' => "Travel - Vlogs"],
-      [ 'link' => 'https://www.youtube.com/playlist?list=PLnAxMOVwqslEjju22ao-CcfceynfUpVXt', 'icon' => 'video-icon', 'title' => "Unboxing - Tutorials"],
+    //Add New Link on this line using this format [ 'link' => 'link-url-here', 'icon' => '<span>icon here</span>', 'title' => "<span>Title of the Link</span>" ],
+      [ 'link' => 'https://fdiengdoh.com/2026/07/oh-i-was-there.html', 'icon' => '<span>link-icon</span>', 'title' => "<span>Oh! I was there!</span></a>" ],
+      [ 'link' => 'https://fdiengdoh.com/2026/06/small-habits-big-impact-why-i-switched-back-to-a-fountain-pen.html', 'icon' => '<span>link-icon</span>', 'title' => "<span>Small Habits, Big Impact: Why I Switched Back to a Fountain Pen?</span>" ],
+      [ 'link' => 'https://www.fdiengdoh.com/2025/02/link-list-for-my-social-media.html', 'icon' => '<span>link-icon</span>', 'title' => "<span>My Own Social Media Link List</span>" ],
+      [ 'link' => 'https://www.fdiengdoh.com/2023/01/calendar-2023.html', 'icon' => '<span>link-icon</span>', 'title' => "<span>Ka Kyrteng jong ki Bnai ha ka Ktien Khasi</span>" ],
+      [ 'link' => 'https://www.fdiengdoh.com/2022/04/useful-email-aliases-using-google-mail.html', 'icon' => '<span>link-icon</span>', 'title' => "<span>Useful Email Aliases using GMail</span>" ],
+      [ 'link' => 'https://www.fdiengdoh.com/2020/07/ka-ei-ka-vaccine.html', 'icon' => '<span>link-icon</span>', 'title' => "<span>Ka ei ka Baksin (Vaccine)?</span>" ],
+      [ 'link' => 'https://youtu.be/tTNKS6CsG3o', 'icon' => '<span>video-icon</span>', 'title' => "<span>Ka Hima Lyngiong</span>" ],
+      [ 'link' => 'https://youtu.be/fix8QC_rlY8', 'icon' => '<span>video-icon</span>', 'title' => "<span>Resonate Router UPS: A Review</span>" ],
+      [ 'link' => 'https://youtu.be/RRSOQHD1H50', 'icon' => '<span>video-icon</span>', 'title' => "<span>Meghalaya - a bird's eye view</span>" ],
+      [ 'link' => 'https://youtu.be/GmoQa8Y61TE', 'icon' => '<span>video-icon</span>', 'title' => "<span>Phe Phe Falls - Jaiñtia Hills</span>" ],
+      [ 'link' => 'https://www.youtube.com/playlist?list=PLnAxMOVwqslFysqxWXNin2Y2w5J2y17Od', 'icon' => '<span>video-icon</span>', 'title' => "<span>Travel - Vlogs</span>" ],
+      [ 'link' => 'https://www.youtube.com/playlist?list=PLnAxMOVwqslEjju22ao-CcfceynfUpVXt', 'icon' => '<span>video-icon</span>', 'title' => "<span>Unboxing - Tutorials</span>" ]
   ];
     //This pattern is to generate icons base on title obtained from array.
     $pattern         = [ "/video-icon/i","/link-icon/i"];
@@ -27,133 +29,176 @@
       <link rel="icon" href="ltree/favicon.png" type="image/png" >
       <title>fdiengdoh.com Link List</title>
       <style>
-          body {
-              margin: 0;
-              font-family: Arial, sans-serif;
-              background: #020617;
-              color: #fff;
-              display: flex;
-              justify-content: center;
-          }
-  
-          .container {
-              width: 100%;
-              max-width: 650px;
-              text-align: center;
-              padding: 12px;
-          }
-  
-          /* Logo */
-          .logo svg{
-              width: 100px;
-              height: 100px;
-              border-radius: 50%;
-              object-fit: cover;
-              margin: 20px auto;
-          }
-  
-          /* Social icons */
-          .social {
-              margin: 15px 0;
-          }
-          a {
-              text-decoration: none;
-              color:#fff;
-          }
-  
-          .social a {
-      			margin: 0 10px;
-      			font-size: 36px;
-      			display: inline-block;
-      			transition: transform 0.2s ease, color 0.3s;
-  			}
-  
-          .social a:hover {
-              color: #94afd4;
-          }
-  
-          /* Link buttons */
-          .links a {
-              display: block;
-              background: #334155;
-              padding: 16px 10px;
-              text-align: left;
-              margin: 20px 0;
-              border-radius: 10px;
-              border: 1px solid #334155;
-              transition: 0.3s;
-          }
-  
-          .links a:hover {
-              background: #94afd4;
-              color: #000;
-          }
-  
-          /* Footer */
-          .footer {
-              margin-top: 30px;
-              font-size: 14px;
-              color: #94a3b8;
-          }
+          :root{
+                /** Base text colors */
+                --light-a0: #ffffff;
+                --light-a10: #e0dfdf;
 
-          .svg-icons {
-            box-sizing: content-box;
-            display: inline-block;
-            height: 1.2em;
-            overflow: visible;
-            vertical-align: -0.125em;
-            width: 1.25em;
-        }
+                /** Theme primary colors */
+                --primary-a0: #1e4c7c;
+                --primary-a10: #355d89;
+
+                /** Theme surface colors */
+                --surface-a0: #121212;
+                --surface-a10: #252525;
+
+                /** Theme tonal surface colors */
+                --surface-tonal-a0: #14181b;
+                --surface-tonal-a10: #272b2e;
+                --surface-tonal-a20: #3b3f42;
+            }
+            *,*:before,*:after{
+                margin:0;
+                padding: 0;
+            }
+
+            body,header,main,footer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            body{
+                min-height: 100dvh;
+                justify-content: top;
+                margin: 0 auto;
+                max-width: 650px;
+                gap:1rem;
+                font-family: Arial, sans-serif;
+                background: var(--surface-a10);
+                color: var(--light-a0);
+            }
+            header{
+                /* Logo */
+                .logo svg{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin: 20px auto;
+                }
+            }
+            main{
+                /* Link buttons */
+                .links {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    width: 100%;
+                    a {
+                        background:var(--surface-a0);
+                        transition: 0.5s;
+                        color: var(--light-a0);
+                        border-radius: 10px;
+                        display: flex;
+                        flex-direction: row;
+                        gap:10px;
+                        justify-content: start;
+                        align-items: center;
+                        outline: none;
+                        border: none;
+                        padding:1rem;
+                        text-decoration: none;
+                        text-align: start;
+                        margin:0 1rem;
+                        font-size:1.1rem;
+                        .svg-icons{
+                            background-color:var(--primary-a10);
+                            border-radius: 10%;
+                            padding:10px;
+                        }
+                    }
+
+                    a:hover {
+                        background:var(--surface-tonal-a20);
+                        text-decoration: none;
+                    }
+                }
+            }
+            footer{
+                padding: 1rem 0;
+                color: var(--light-a10);
+                a{
+                    text-decoration:underline;
+                    color:var(--light-a10);
+                }
+            }
+            
+            /* Social icons */
+            .social {
+                display: flex;
+                flex-direction: row;
+                gap:clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+                a {
+                    font-size: clamp(2.5rem, 2.4rem + 0.5vw, 3rem);
+                    transition: transform 0.2s ease, color 0.3s;
+                    color: var(--light-a0);
+                    text-decoration: none;
+                }
+                a:hover {
+                    color: #94afd4;
+                }
+            }
+            
+            .svg-icons {
+                box-sizing: content-box;
+                display: inline-block;
+                width: 1.2em;
+                height: 1.2em;
+                overflow: visible;
+                vertical-align: -0.125em;
+                width: 1.25em;
+            }
       </style>
    </head>
    <body>
-    <div class="container">
-    
-        <!-- Logo -->
-        <div class="logo">
-            <svg width="100" height="100"><use xlink:href="#fdphy"></use></svg>
-        </div>
-    
-        <!-- Top Social -->
-        <div class="social">
-            <a href="https://www.facebook.com/fdphy" target="_blank" title="Facebook"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#facebook"></use></svg></a>
-            <a href="https://www.youtube.com/fdphy" target="_blank" title="YouTube"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#youtube"></use></svg></a>
-            <a href="https://www.x.com/fdphy_in" target="_blank" title="X (Twitter)"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#x-twitter"></use></svg></a>
-            <a href="https://www.instagram.com/fdphy" target="_blank" title="Instagram"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#instagram"></use></svg></a>
-            <a href="https://www.fdiengdoh.com" target="_blank" title="Website"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#safari"></use></svg></a>
-        </div>
-    
-        <!-- Links -->
-        <div class="links">
+    <header>
+            <!-- Logo -->
+            <div class="logo">
+                <svg width="100" height="100"><use xlink:href="#fdphy"></use></svg>
+            </div>
+            <!-- Top Social -->
+            <div class="social">
+                <a href="https://www.facebook.com/fdphy" target="_blank" title="Facebook"><svg role="img" aria-hidden="true" class="svg-icons"><use href="#facebook"></use></svg></a>
+                <a href="https://www.youtube.com/fdphy" target="_blank" title="YouTube"><svg role="img" aria-hidden="true" class="svg-icons"><use href="#youtube"></use></svg></a>
+                <a href="https://www.x.com/fdphy_in" target="_blank" title="X (Twitter)"><svg role="img" aria-hidden="true" class="svg-icons"><use href="#x-twitter"></use></svg></a>
+                <a href="https://www.instagram.com/fdphy" target="_blank" title="Instagram"><svg role="img" aria-hidden="true" class="svg-icons"><use href="#instagram"></use></svg></a>
+                <a href="https://www.fdiengdoh.com" target="_blank" title="Website"><svg role="img" aria-hidden="true" class="svg-icons"><use href="#safari"></use></svg></a>
+            </div>
+        </header>
+        <main>
+            <!-- Links -->
+            <div class="links">
     <?php foreach($links as $link):  ?>
             <a href="<?= $link['link'] ?>" target="_blank"> <?= preg_replace($pattern,$replacement,$link['icon']) ?> &raquo; <?= $link['title'] ?></a>
     <?php endforeach; ?>
             <div>Connect with @fdphy</div>   
-            <!-- Social accounts links -->
-            <a href="https://whatsapp.com/channel/0029Va9VuhPI1rcehvL1h91F" class="link-button" target="_blank"><svg class="svg-icons"><use href="#whatsapp"></use></svg>/fdphy - WhatsApp</a>
-            <a href="https://www.youtube.com/fdphy/?sub_confirmation=1" class="link-button" target="_blank"><svg class="svg-icons"><use href="#youtube"></use></svg> /fdphy - YouTube</a>
-            <a href="https://www.facebook.com/fdphy" class="link-button" target="_blank"><svg class="svg-icons"><use href="#facebook"></use></svg> /fdphy - Facebook</a>
-            <a href="https://www.instagram.com/fdphy" class="link-button" target="_blank"><svg class="svg-icons"><use href="#instagram"></use></svg> /fdphy - Instagram</a>
-            <a href="https://www.twitter.com/fdphy_in" class="link-button" target="_blank"><svg class="svg-icons"><use href="#x-twitter"></use></svg> /fdphy_in - X (Twitter)</a>
-            <a href="https://github.com/fdiengdoh" class="link-button" target="_blank"><svg class="svg-icons"><use href="#github"></use></svg> /fdiengdoh - GitHub</a>
-            <a href="https://www.fdiengdoh.com" class="link-button" target="_blank"><svg class="svg-icons"><use href="#safari"></use></svg> Website » fdiengdoh.com</a>
-        </div>
-    
-        <!-- Bottom Social -->
-        <div class="social">
-            <a href="https://www.facebook.com/fdphy" target="_blank" title="Facebook"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#facebook"></use></svg></a>
-            <a href="https://www.youtube.com/fdphy" target="_blank" title="YouTube"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#youtube"></use></svg></a>
-            <a href="https://www.x.com/fdphy_in" target="_blank" title="X (Twitter)"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#x-twitter"></use></svg></a>
-            <a href="https://www.instagram.com/fdphy" target="_blank" title="Instagram"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#instagram"></use></svg></a>
-            <a href="https://www.fdiengdoh.com" target="_blank" title="Website"><svg role="img" aria-hidden="true" width="45" height="45"><use href="#safari"></use></svg></a>
-        </div>
-    
-        <!-- Footer -->
-        <div class="footer">
-            Copyrights 2010 - <span id="year"></span> &copy; <a href="https://fdh.pw">fdh.pw</a>
-        </div>
-    
-    </div>
+                <!-- Social accounts links -->
+                <a href="https://whatsapp.com/channel/0029Va9VuhPI1rcehvL1h91F" target="_blank"><svg class="svg-icons"><use href="#whatsapp"></use></svg>/fdphy - WhatsApp</a>
+                <a href="https://www.youtube.com/fdphy/?sub_confirmation=1" target="_blank"><svg class="svg-icons"><use href="#youtube"></use></svg> /fdphy - YouTube</a>
+                <a href="https://www.facebook.com/fdphy" target="_blank"><svg class="svg-icons"><use href="#facebook"></use></svg> /fdphy - Facebook</a>
+                <a href="https://www.instagram.com/fdphy" target="_blank"><svg class="svg-icons"><use href="#instagram"></use></svg> /fdphy - Instagram</a>
+                <a href="https://www.twitter.com/fdphy_in" target="_blank"><svg class="svg-icons"><use href="#x-twitter"></use></svg> /fdphy_in - X (Twitter)</a>
+                <a href="https://github.com/fdiengdoh" target="_blank"><svg class="svg-icons"><use href="#github"></use></svg> /fdiengdoh - GitHub</a>
+                <a href="https://www.fdiengdoh.com" target="_blank"><svg class="svg-icons"><use href="#safari"></use></svg> Website » fdiengdoh.com</a>
+            </div>
+        </main>
+        <footer>
+            <!-- Bottom Social -->
+            <div class="social">
+                <a href="https://www.facebook.com/fdphy" target="_blank" title="Facebook"><svg role="img" aria-hidden="true" class="svg-icons"><use href="#facebook"></use></svg></a>
+                <a href="https://www.youtube.com/fdphy" target="_blank" title="YouTube"><svg role="img" aria-hidden="true" class="svg-icons"><use href="#youtube"></use></svg></a>
+                <a href="https://www.x.com/fdphy_in" target="_blank" title="X (Twitter)"><svg role="img" aria-hidden="true" class="svg-icons"><use href="#x-twitter"></use></svg></a>
+                <a href="https://www.instagram.com/fdphy" target="_blank" title="Instagram"><svg role="img" aria-hidden="true" class="svg-icons"><use href="#instagram"></use></svg></a>
+                <a href="https://www.fdiengdoh.com" target="_blank" title="Website"><svg role="img" aria-hidden="true" class="svg-icons"><use href="#safari"></use></svg></a>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                Copyrights 2010 - <span id="year"></span> &copy; <a href="https://fdh.pw">fdh.pw</a>
+            </div>
+        </footer>
 
     <!-- Logo -->
     <svg xmlns="http://www.w3.org/2000/svg" title="logo" style="display: none;">
