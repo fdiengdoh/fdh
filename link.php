@@ -30,22 +30,25 @@
       <title>fdiengdoh.com Link List</title>
       <style>
           :root{
+                color-scheme: light dark;
+                
                 /** Base text colors */
-                --light-a0: #ffffff;
-                --light-a10: #e0dfdf;
+                --light-a0: light-dark(#000000, #ffffff);
+                --light-a10: light-dark(#272626, #e0dfdf);
 
                 /** Theme primary colors */
                 --primary-a0: #1e4c7c;
                 --primary-a10: #355d89;
+                --primary-a90: #fffff7;
 
                 /** Theme surface colors */
-                --surface-a0: #121212;
-                --surface-a10: #252525;
+                --surface-a0: light-dark(#fff, #121212);
+                --surface-a10: light-dark(#f2f2f2, #252525);
+                --surface-a90: light-dark( #252525, #f2f2f2);
 
                 /** Theme tonal surface colors */
-                --surface-tonal-a0: #14181b;
-                --surface-tonal-a10: #272b2e;
-                --surface-tonal-a20: #3b3f42;
+                --surface-tonal-a0: light-dark(#e7ecf2, #14181b);
+                --surface-tonal-a10: light-dark(#dce1e6, #272b2e);
             }
             *,*:before,*:after{
                 margin:0;
@@ -105,13 +108,14 @@
                         font-size:1.1rem;
                         .svg-icons{
                             background-color:var(--primary-a10);
+                            color:var(--primary-a90);
                             border-radius: 10%;
                             padding:10px;
                         }
                     }
 
                     a:hover {
-                        background:var(--surface-tonal-a20);
+                        background:var(--surface-tonal-a10);
                         text-decoration: none;
                     }
                 }
@@ -137,7 +141,7 @@
                     text-decoration: none;
                 }
                 a:hover {
-                    color: #94afd4;
+                    color: var(--surface-a90);
                 }
             }
             
